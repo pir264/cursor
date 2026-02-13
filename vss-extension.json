@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "name": "Pipeline Stages Viewer",
   "description": "View detailed stage information for YAML pipelines",
-  "publisher": "",
+  "publisher": "PeterCR",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
@@ -13,6 +13,9 @@
   "scopes": [
     "vso.build",
     "vso.project"
+  ],
+  "categories": [
+    "Azure Pipelines"
   ],
   "contributions": [
     {
