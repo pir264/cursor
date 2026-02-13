@@ -1,0 +1,41 @@
+{
+  "name": "azure-devops-pipeline-stages-extension",
+  "version": "1.0.0",
+  "description": "Azure DevOps extension to display pipeline stage information",
+  "main": "dist/PipelineStagesHub/PipelineStagesHub.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "package": "tfx extension create --manifest-globs vss-extension.json"
+  },
+  "keywords": [
+    "azure-devops",
+    "extension",
+    "pipelines",
+    "stages"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "azure-devops-extension-api": "^4.266.0",
+    "azure-devops-extension-sdk": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "css-loader": "^6.8.1",
+    "eslint": "^8.45.0",
+    "html-webpack-plugin": "^5.5.3",
+    "sass": "^1.64.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  }
+}

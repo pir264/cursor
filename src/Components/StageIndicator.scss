@@ -1,0 +1,141 @@
+.stage-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  &.compact {
+    padding: 2px 6px;
+    gap: 4px;
+  }
+
+  .stage-icon {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1;
+  }
+
+  .stage-name {
+    color: inherit;
+  }
+
+  .stage-duration {
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 11px;
+    margin-left: 4px;
+  }
+
+  // Status colors
+  &.succeeded {
+    background-color: #e7f5e7;
+    color: #107c10;
+    border: 1px solid #107c10;
+
+    .stage-icon {
+      color: #107c10;
+    }
+  }
+
+  &.failed {
+    background-color: #fde7e7;
+    color: #d13438;
+    border: 1px solid #d13438;
+
+    .stage-icon {
+      color: #d13438;
+    }
+  }
+
+  &.in-progress {
+    background-color: #fff4e5;
+    color: #ff8c00;
+    border: 1px solid #ff8c00;
+    animation: pulse 2s ease-in-out infinite;
+
+    .stage-icon {
+      color: #ff8c00;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  &.cancelled,
+  &.skipped {
+    background-color: #f3f2f1;
+    color: #605e5c;
+    border: 1px solid #605e5c;
+
+    .stage-icon {
+      color: #605e5c;
+    }
+  }
+
+  &.not-started {
+    background-color: #f3f2f1;
+    color: #8a8886;
+    border: 1px solid #8a8886;
+
+    .stage-icon {
+      color: #8a8886;
+    }
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Dark theme support
+[data-theme="dark"] .stage-indicator {
+  .stage-duration {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  &.succeeded {
+    background-color: rgba(16, 124, 16, 0.2);
+    color: #6fcf97;
+    border-color: #6fcf97;
+  }
+
+  &.failed {
+    background-color: rgba(209, 52, 56, 0.2);
+    color: #ff6b6b;
+    border-color: #ff6b6b;
+  }
+
+  &.in-progress {
+    background-color: rgba(255, 140, 0, 0.2);
+    color: #ffb84d;
+    border-color: #ffb84d;
+  }
+
+  &.cancelled,
+  &.skipped {
+    background-color: rgba(96, 94, 92, 0.2);
+    color: #a19f9d;
+    border-color: #a19f9d;
+  }
+
+  &.not-started {
+    background-color: rgba(138, 136, 134, 0.2);
+    color: #c8c6c4;
+    border-color: #c8c6c4;
+  }
+}

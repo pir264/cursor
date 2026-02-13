@@ -1,0 +1,49 @@
+.pipeline-stages-hub {
+  padding: 0;
+  min-height: 100vh;
+  background-color: #faf9f8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.hub-header {
+  padding: 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e1dfdd;
+  margin-bottom: 0;
+
+  h1 {
+    margin: 0 0 8px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: #323130;
+  }
+
+  .hub-description {
+    margin: 0;
+    font-size: 14px;
+    color: #605e5c;
+    line-height: 1.5;
+  }
+}
+
+.hub-content {
+  padding: 0;
+}
+
+// Dark theme support
+[data-theme="dark"] .pipeline-stages-hub {
+  background-color: #1e1e1e;
+
+  .hub-header {
+    background-color: #252423;
+    border-bottom-color: #3e3e3e;
+
+    h1 {
+      color: #ffffff;
+    }
+
+    .hub-description {
+      color: #a19f9d;
+    }
+  }
+}

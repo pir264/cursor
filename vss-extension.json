@@ -1,0 +1,36 @@
+{
+  "manifestVersion": 1,
+  "id": "pipeline-stages-extension",
+  "version": "1.0.0",
+  "name": "Pipeline Stages Viewer",
+  "description": "View detailed stage information for YAML pipelines",
+  "publisher": "",
+  "targets": [
+    {
+      "id": "Microsoft.VisualStudio.Services"
+    }
+  ],
+  "scopes": [
+    "vso.build",
+    "vso.project"
+  ],
+  "contributions": [
+    {
+      "id": "pipeline-stages-hub",
+      "type": "ms.vss-web.hub",
+      "targets": [
+        "ms.vss-build-web.pipelines-hub-group"
+      ],
+      "properties": {
+        "name": "Pipeline Stages",
+        "uri": "PipelineStagesHub/PipelineStagesHub.html"
+      }
+    }
+  ],
+  "files": [
+    {
+      "path": "dist",
+      "addressable": true
+    }
+  ]
+}

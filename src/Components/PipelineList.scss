@@ -1,0 +1,132 @@
+.pipeline-list {
+  padding: 16px;
+}
+
+.pipeline-group {
+  margin-bottom: 16px;
+  border: 1px solid #e1dfdd;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.pipeline-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #faf9f8;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #f3f2f1;
+  }
+
+  .expand-icon {
+    margin-right: 12px;
+    font-size: 12px;
+    color: #605e5c;
+    transition: transform 0.2s ease;
+  }
+
+  &.expanded .expand-icon {
+    transform: rotate(90deg);
+  }
+
+  .pipeline-group-name {
+    flex: 1;
+    font-size: 16px;
+    font-weight: 600;
+    color: #323130;
+  }
+
+  .pipeline-run-count {
+    font-size: 12px;
+    color: #605e5c;
+    margin-left: 12px;
+  }
+}
+
+.pipeline-runs {
+  padding: 16px;
+  background-color: #ffffff;
+}
+
+.no-runs {
+  padding: 24px;
+  text-align: center;
+  color: #8a8886;
+  font-style: italic;
+}
+
+.pipeline-list-loading,
+.pipeline-list-error,
+.pipeline-list-empty {
+  padding: 48px 24px;
+  text-align: center;
+  color: #605e5c;
+}
+
+.pipeline-list-loading {
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e1dfdd;
+    border-top-color: #0078d4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 16px;
+  }
+}
+
+.pipeline-list-error {
+  .error-icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #d13438;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// Dark theme support
+[data-theme="dark"] {
+  .pipeline-group {
+    background-color: #1e1e1e;
+    border-color: #3e3e3e;
+  }
+
+  .pipeline-header {
+    background-color: #252423;
+
+    &:hover {
+      background-color: #2d2c2c;
+    }
+
+    .pipeline-group-name {
+      color: #ffffff;
+    }
+
+    .pipeline-run-count {
+      color: #a19f9d;
+    }
+  }
+
+  .pipeline-runs {
+    background-color: #1e1e1e;
+  }
+
+  .pipeline-list-loading,
+  .pipeline-list-error,
+  .pipeline-list-empty {
+    color: #a19f9d;
+  }
+}
