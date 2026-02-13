@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "name": "Pipeline Stages Viewer",
   "description": "View detailed stage information for YAML pipelines",
-  "publisher": "PeterCR",
+  "publisher": "pwdev",
   "targets": [
     {
       "id": "Microsoft.VisualStudio.Services"
