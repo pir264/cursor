@@ -8,7 +8,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    libraryTarget: 'amd',
+    libraryTarget: 'var',
+    library: 'PipelineStagesHubApp',
     publicPath: ''
   },
   externals: [
@@ -41,7 +42,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/PipelineStagesHub/PipelineStagesHub.html',
       filename: 'PipelineStagesHub/PipelineStagesHub.html',
-      chunks: ['PipelineStagesHub/PipelineStagesHub']
+      chunks: ['PipelineStagesHub/PipelineStagesHub'],
+      inject: false
     })
   ],
   devtool: 'source-map'
